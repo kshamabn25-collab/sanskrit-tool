@@ -1,7 +1,20 @@
-# Tauri + React + Typescript
+# Sanskrit Tool
 
-This template should help get you started developing with Tauri, React and Typescript in Vite.
+A free, offline system-tray app for Sanskrit and Indic script conversion.
 
-## Recommended IDE Setup
+- **Phonetic → Script** — type ITRANS/HK/SLP1, get output in Devanagari, Kannada, Telugu, Tamil, Bengali or Malayalam
+- **Indic → IAST** — paste any Indic text, get IAST transliteration instantly
+- Lives in your menu bar, works 100% offline
 
-- [VS Code](https://code.visualstudio.com/) + [Tauri](https://marketplace.visualstudio.com/items?itemName=tauri-apps.tauri-vscode) + [rust-analyzer](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer)
+## Download
+
+👉 **[Go to Releases](https://github.com/kshamabn25-collab/sanskrit-tool/releases/latest)** to download for macOS or Windows.
+
+Or visit the **[landing page](https://kshamabn25-collab.github.io/sanskrit-tool)** for more info.
+
+## Keyboard Shortcuts
+
+| Action | Shortcut |
+|--------|----------|
+| Open (IAST mode) | `Alt+Shift+I` |
+| Open (Phonetic mode) | `Alt+Shift+D` |
