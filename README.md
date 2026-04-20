@@ -16,5 +16,4 @@ Or visit the **[landing page](https://kshamabn25-collab.github.io/sanskrit-tool)
 
 | Action | Shortcut |
 |--------|----------|
-| Open (IAST mode) | `Alt+Shift+I` |
-| Open (Phonetic mode) | `Alt+Shift+D` |
+| Open app | `Alt+Shift+I` |
