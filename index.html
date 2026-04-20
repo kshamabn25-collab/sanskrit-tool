@@ -55,9 +55,14 @@
     <p>macOS 11 Big Sur or later.<br/>Apple Silicon &amp; Intel supported.</p>
     <details class="gatekeeper-note">
       <summary>⚠️ macOS says "damaged"? Click here to fix</summary>
-      <p style="margin:8px 0 4px">Open <strong>Terminal</strong> and run:</p>
-      <code style="display:block;padding:6px 10px;background:#111;border-radius:5px;font-size:12px;margin-bottom:8px">xattr -cr "/Applications/Sanskrit Tool.app"</code>
-      <p>Or download <a href="https://github.com/kshamabn25-collab/sanskrit-tool/releases/latest/download/fix-mac-gatekeeper.command" style="color:#89dceb">fix-mac-gatekeeper.command</a> and double-click it to fix automatically.</p>
+      <ol style="margin:10px 0 0 16px;display:flex;flex-direction:column;gap:8px">
+        <li>Click <strong>Cancel</strong> on the error dialog</li>
+        <li>Go to <strong>System Settings → Privacy &amp; Security</strong> → scroll to the bottom → click <strong>"Open Anyway"</strong> next to Sanskrit Tool</li>
+        <li>If that button is not there, open <strong>Terminal</strong> and run:<br/>
+          <code style="display:block;margin-top:5px;padding:6px 10px;background:#111;border-radius:5px;font-size:12px">xattr -cr "/Applications/Sanskrit Tool.app"</code>
+          Then double-click the app.
+        </li>
+      </ol>
     </details>
     <!-- Replace kshamabn25-collab/sanskrit-tool with your actual repo -->
     <a class="dl-btn" href="https://github.com/kshamabn25-collab/sanskrit-tool/releases/latest/download/Sanskrit-Tool-mac.dmg">
