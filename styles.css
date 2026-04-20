@@ -325,3 +325,58 @@ footer a { color: var(--text-dim); }
 .gatekeeper-note summary::-webkit-details-marker { display: none; }
 .gatekeeper-note[open] summary { margin-bottom: 2px; }
 .gatekeeper-note li { line-height: 1.6; }
+
+/* ── About page ── */
+.about-page {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 40px 24px 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.about-hero {
+  text-align: center;
+  padding: 40px 0 20px;
+}
+
+.about-card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px 28px;
+}
+
+.about-card h2 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 12px;
+}
+
+.about-card p {
+  font-size: 14px;
+  color: var(--text-dim);
+  line-height: 1.7;
+}
+
+.about-link {
+  color: var(--teal);
+  text-decoration: none;
+}
+.about-link:hover { text-decoration: underline; }
+
+.bmc-btn {
+  display: inline-block;
+  margin-top: 16px;
+  background: #ffdd00;
+  color: #000;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 10px 22px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: opacity 0.15s;
+}
+.bmc-btn:hover { opacity: 0.85; color: #000; text-decoration: none; }
