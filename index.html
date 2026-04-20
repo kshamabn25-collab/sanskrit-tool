@@ -53,7 +53,12 @@
     <div class="dl-icon">🍎</div>
     <h3>macOS</h3>
     <p>macOS 11 Big Sur or later.<br/>Apple Silicon &amp; Intel supported.</p>
-    <p class="gatekeeper-note">⚠️ After installing, if macOS says "damaged": right-click the app → <strong>Open</strong> → <strong>Open</strong> again. Only needed once.</p>
+    <details class="gatekeeper-note">
+      <summary>⚠️ macOS says "damaged"? Click here to fix</summary>
+      <p style="margin:8px 0 4px">Open <strong>Terminal</strong> and run:</p>
+      <code style="display:block;padding:6px 10px;background:#111;border-radius:5px;font-size:12px;margin-bottom:8px">xattr -cr "/Applications/Sanskrit Tool.app"</code>
+      <p>Or download <a href="https://github.com/kshamabn25-collab/sanskrit-tool/releases/latest/download/fix-mac-gatekeeper.command" style="color:#89dceb">fix-mac-gatekeeper.command</a> and double-click it to fix automatically.</p>
+    </details>
     <!-- Replace kshamabn25-collab/sanskrit-tool with your actual repo -->
     <a class="dl-btn" href="https://github.com/kshamabn25-collab/sanskrit-tool/releases/latest/download/Sanskrit-Tool-mac.dmg">
       Download .dmg
