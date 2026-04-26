@@ -65,7 +65,7 @@ nav {
 .hero {
   text-align: center;
   padding: 80px 24px 60px;
-  max-width: 700px;
+  max-width: 860px;
   margin: 0 auto;
 }
 
@@ -98,10 +98,11 @@ h1 {
   background: var(--purple-light);
   border: 1px solid var(--border);
   border-radius: 8px;
-  padding: 8px 16px;
+  padding: 6px 14px;
   font-family: "Noto Serif Devanagari", Georgia, serif;
-  font-size: 18px;
+  font-size: 17px;
   color: var(--purple);
+  white-space: nowrap;
 }
 
 /* ── Download cards ── */
