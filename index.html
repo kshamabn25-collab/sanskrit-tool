@@ -114,33 +114,33 @@
   <div class="feature-grid">
     <div class="feature-card">
       <div class="icon">⌨️</div>
-      <h4>Phonetic → 6 Scripts</h4>
-      <p>Type ITRANS, Harvard-Kyoto, or SLP1 and get live output in Devanagari, Kannada, Telugu, Tamil, Bengali, or Malayalam.</p>
+      <h4>Sanskrit IME — type anywhere</h4>
+      <p>Toggle a system-wide Sanskrit input mode with <code>⌥⇧M</code>. Type phonetic Roman in any app — WhatsApp, Notion, Word, browser — and get Indic script inserted directly, no copy-paste needed.</p>
+    </div>
+    <div class="feature-card">
+      <div class="icon">🔡</div>
+      <h4>7 output scripts</h4>
+      <p>Devanagari, Kannada, Telugu, Tamil, Bengali, Malayalam, and IAST. Switch scripts instantly from the tray menu or with <code>⌥⇧O</code>.</p>
     </div>
     <div class="feature-card">
       <div class="icon">🔤</div>
-      <h4>Indic → IAST</h4>
-      <p>Paste any Indic script text and instantly get the IAST (International Alphabet of Sanskrit Transliteration) equivalent.</p>
+      <h4>3 input schemes</h4>
+      <p>ITRANS, Harvard-Kyoto, and SLP1 — the most widely used phonetic Sanskrit schemes. Switch on the fly with <code>⌥⇧1 / 2 / 3</code>.</p>
     </div>
     <div class="feature-card">
-      <div class="icon">📋</div>
-      <h4>One-click Copy</h4>
-      <p>Copy the output to your clipboard with a single click. Paste anywhere — documents, emails, code.</p>
-    </div>
-    <div class="feature-card">
-      <div class="icon">📌</div>
-      <h4>Lives in the Menu Bar</h4>
-      <p>Always one click away in your system tray. No dock clutter. Launches on hotkey.</p>
+      <div class="icon">🪟</div>
+      <h4>Quick panel</h4>
+      <p>Press <code>⌥⇧S</code> for a floating mini-panel — type a word, preview the output, press Enter to paste. Disappears when done.</p>
     </div>
     <div class="feature-card">
       <div class="icon">✈️</div>
-      <h4>100% Offline</h4>
-      <p>No internet connection required. No data leaves your machine. Works anywhere.</p>
+      <h4>100% offline</h4>
+      <p>No internet required. No data leaves your machine. Works on planes, in remote areas, everywhere.</p>
     </div>
     <div class="feature-card">
-      <div class="icon">🆓</div>
-      <h4>Free &amp; Open Source</h4>
-      <p>MIT licensed. No subscriptions, no accounts, no telemetry.</p>
+      <div class="icon">📌</div>
+      <h4>Lives in the menu bar</h4>
+      <p>Always one click away. No dock clutter. Launches at login so it's always ready.</p>
     </div>
   </div>
 </section>
@@ -153,29 +153,35 @@
       <div class="step-num">1</div>
       <div class="step-body">
         <h4>Install &amp; launch</h4>
-        <p>Download the installer for your platform and run it. Script Tool appears in your menu bar / system tray automatically.</p>
+        <p>Download and run the installer. Script Tool appears in your menu bar automatically and launches at login.</p>
       </div>
     </div>
     <div class="step">
       <div class="step-num">2</div>
       <div class="step-body">
-        <h4>Open with a hotkey or click</h4>
-        <p>Press <code>Alt+Shift+I</code> to open the tool — or just click the tray icon.</p>
+        <h4>Grant Accessibility permission (macOS IME)</h4>
+        <p>On first launch, macOS will prompt you to grant Accessibility access in <strong>System Settings → Privacy &amp; Security → Accessibility</strong>. This is required for the IME to intercept keystrokes system-wide.</p>
       </div>
     </div>
     <div class="step">
       <div class="step-num">3</div>
       <div class="step-body">
-        <h4>Type, convert, copy</h4>
-        <p><strong>Phonetic mode:</strong> type <code>namaskaara</code> → pick a script → output appears live. Click Copy.<br/>
-        <strong>IAST mode:</strong> paste Indic text → IAST appears instantly. Click Copy.</p>
+        <h4>Toggle the Sanskrit IME</h4>
+        <p>Press <code>⌥⇧M</code> — a small status bar appears at the top of your screen. Click into any text field in any app and start typing phonetic Sanskrit.</p>
       </div>
     </div>
     <div class="step">
       <div class="step-num">4</div>
       <div class="step-body">
-        <h4>Paste anywhere</h4>
-        <p>The result is on your clipboard. Paste it into any app — Word, Google Docs, browser, code editor.</p>
+        <h4>Type and commit words</h4>
+        <p>Type <code>namaskaara</code> → the status bar shows <em>namaskaara → नमस्कार</em> live. Press <kbd>Space</kbd> to insert the converted word and continue, or <kbd>Esc</kbd> to cancel.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">5</div>
+      <div class="step-body">
+        <h4>Use the converter window or quick panel</h4>
+        <p>Press <code>⌥⇧I</code> for the full converter window, or <code>⌥⇧S</code> for a floating quick panel — type, preview, press Enter to paste into whatever app is behind it.</p>
       </div>
     </div>
   </div>
@@ -184,18 +190,56 @@
 <!-- ── Keyboard Shortcuts ── -->
 <section class="shortcuts" id="shortcuts">
   <h2>Keyboard Shortcuts</h2>
+
+  <p class="shortcuts-sub">Global — work from any app, always active</p>
   <div class="shortcut-table">
     <div class="shortcut-row">
-      <span>Open app</span>
-      <div class="kbd-group">
-        <kbd>Alt</kbd><kbd>Shift</kbd><kbd>I</kbd>
-      </div>
+      <span>Open converter window</span>
+      <div class="kbd-group"><kbd>⌥</kbd><kbd>⇧</kbd><kbd>I</kbd></div>
     </div>
     <div class="shortcut-row">
-      <span>Copy output</span>
-      <div class="kbd-group">
-        <kbd>Click Copy button</kbd>
-      </div>
+      <span>Open quick panel</span>
+      <div class="kbd-group"><kbd>⌥</kbd><kbd>⇧</kbd><kbd>S</kbd></div>
+    </div>
+    <div class="shortcut-row">
+      <span>Toggle Sanskrit IME on/off</span>
+      <div class="kbd-group"><kbd>⌥</kbd><kbd>⇧</kbd><kbd>M</kbd></div>
+    </div>
+  </div>
+
+  <p class="shortcuts-sub" style="margin-top:28px">While Sanskrit IME is active</p>
+  <div class="shortcut-table">
+    <div class="shortcut-row">
+      <span>Switch to ITRANS scheme</span>
+      <div class="kbd-group"><kbd>⌥</kbd><kbd>⇧</kbd><kbd>1</kbd></div>
+    </div>
+    <div class="shortcut-row">
+      <span>Switch to Harvard-Kyoto scheme</span>
+      <div class="kbd-group"><kbd>⌥</kbd><kbd>⇧</kbd><kbd>2</kbd></div>
+    </div>
+    <div class="shortcut-row">
+      <span>Switch to SLP1 scheme</span>
+      <div class="kbd-group"><kbd>⌥</kbd><kbd>⇧</kbd><kbd>3</kbd></div>
+    </div>
+    <div class="shortcut-row">
+      <span>Cycle output script</span>
+      <div class="kbd-group"><kbd>⌥</kbd><kbd>⇧</kbd><kbd>O</kbd></div>
+    </div>
+    <div class="shortcut-row">
+      <span>Commit word + space</span>
+      <div class="kbd-group"><kbd>Space</kbd></div>
+    </div>
+    <div class="shortcut-row">
+      <span>Commit word + newline</span>
+      <div class="kbd-group"><kbd>Enter</kbd></div>
+    </div>
+    <div class="shortcut-row">
+      <span>Delete last phonetic character</span>
+      <div class="kbd-group"><kbd>⌫</kbd></div>
+    </div>
+    <div class="shortcut-row">
+      <span>Cancel and exit IME</span>
+      <div class="kbd-group"><kbd>Esc</kbd></div>
     </div>
   </div>
 </section>

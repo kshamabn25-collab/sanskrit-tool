@@ -267,6 +267,16 @@ code {
   padding: 60px 24px;
 }
 
+.shortcuts-sub {
+  text-align: center;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-dimmer);
+  margin-bottom: 12px;
+}
+
 .shortcut-table {
   max-width: 500px;
   margin: 0 auto;
