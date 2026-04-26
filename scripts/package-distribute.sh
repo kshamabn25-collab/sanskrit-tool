@@ -1,19 +1,33 @@
 #!/usr/bin/env bash
 set -e
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
-BUILT_APP="$ROOT/src-tauri/target/release/bundle/macos/Script Tool.app"
 DIST="$ROOT/Distribute"
+mkdir -p "$DIST"
 
-if [ ! -d "$BUILT_APP" ]; then
-  echo "Error: built app not found at: $BUILT_APP"
-  echo "Run 'npm run build:release' first."
-  exit 1
+# ── macOS ──────────────────────────────────────────────────────────────────────
+BUILT_APP="$ROOT/src-tauri/target/release/bundle/macos/Script Tool.app"
+if [ -d "$BUILT_APP" ]; then
+  cp -rf "$BUILT_APP" "$DIST/Script Tool.app"
+  echo "Done: $DIST/Script Tool.app"
+else
+  echo "Warning: macOS app not found (skipping) — expected: $BUILT_APP"
 fi
 
-mkdir -p "$DIST"
-cp -rf "$BUILT_APP" "$DIST/Script Tool.app"
-echo "Done: $DIST/Script Tool.app"
+# ── Windows ────────────────────────────────────────────────────────────────────
+# Tauri produces an .msi under bundle/msi/ and an .exe under bundle/nsis/
+MSI_DIR="$ROOT/src-tauri/target/release/bundle/msi"
+NSIS_DIR="$ROOT/src-tauri/target/release/bundle/nsis"
+
+if ls "$MSI_DIR"/*.msi 2>/dev/null | grep -q .; then
+  cp "$MSI_DIR"/*.msi "$DIST/"
+  echo "Done: $(ls "$MSI_DIR"/*.msi | head -1 | xargs basename)"
+elif ls "$NSIS_DIR"/*.exe 2>/dev/null | grep -q .; then
+  cp "$NSIS_DIR"/*.exe "$DIST/"
+  echo "Done: $(ls "$NSIS_DIR"/*.exe | head -1 | xargs basename)"
+else
+  echo "Warning: Windows installer not found (skipping) — build on Windows to produce .msi"
+fi
+
 echo ""
-echo "Distribute/ is ready. Share both files with users:"
-echo "  • Script Tool.app"
-echo "  • Install Script Tool.app  (double-click to install, no Terminal needed)"
+echo "Distribute/ contents:"
+ls -1 "$DIST/"
