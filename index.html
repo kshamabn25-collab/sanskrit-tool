@@ -3,10 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Script Tool — Indic Script Converter</title>
-  <meta name="description" content="A free, offline system-tray tool for phonetic input in 6 Indian scripts and Indic-to-IAST transliteration. macOS & Windows." />
+  <title>Script Tool — Type Indic Scripts in Any App</title>
+  <meta name="description" content="Free offline app for typing Sanskrit and all Indic scripts anywhere. System-wide IME + offline converter. 6 scripts + IAST. macOS & Windows." />
   <link rel="stylesheet" href="styles.css" />
-  <!-- Google Fonts for Indic scripts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Devanagari&family=Noto+Sans+Kannada&family=Noto+Sans+Telugu&family=Noto+Serif+Tamil&family=Noto+Sans+Bengali&family=Noto+Sans+Malayalam&display=swap" rel="stylesheet" />
 </head>
@@ -22,7 +21,6 @@
     <li><a href="#features">Features</a></li>
     <li><a href="#how-it-works">How it works</a></li>
     <li><a href="#shortcuts">Shortcuts</a></li>
-    <!-- Replace with your actual GitHub repo URL -->
     <li><a href="about.html">About</a></li>
     <li><a href="https://github.com/kshamabn25-collab/script-tool" target="_blank">GitHub ↗</a></li>
   </ul>
@@ -30,26 +28,46 @@
 
 <!-- ── Hero ── -->
 <section class="hero">
-  <div class="hero-icon">ॐ</div>
-  <h1>Type Sanskrit in Any App.<br/>In Any Script.</h1>
-  <p class="hero-sub">
-    The Sanskrit IME converts <em>as you type</em> — directly into WhatsApp, Notion, Word, or any app.<br/>
-    Or use the offline converter to transliterate and copy-paste in seconds.
+  <div class="hero-icon animate-drop">ॐ</div>
+  <h1 class="animate-up" style="--delay:0.1s">
+    Type in Any Indic Script.<br/>In Any App. On Any Platform.
+  </h1>
+  <p class="hero-sub animate-up" style="--delay:0.2s">
+    A system-wide IME that converts <em>as you type</em> — inline, directly inside WhatsApp, Notion, Word, or any app.<br/>
+    Plus a full offline converter for copy-paste — with simultaneous IAST output. Free. No account. No internet.
   </p>
 
-  <div class="hero-pills">
-    <span class="hero-pill">⌨️ Inline IME — converts as you type</span>
-    <span class="hero-pill">📋 Offline converter — copy &amp; paste anywhere</span>
-    <span class="hero-pill">✈️ 100% offline · no account needed</span>
+  <div class="hero-badges animate-up" style="--delay:0.3s">
+    <span class="badge badge-purple">⌨️ Inline IME</span>
+    <span class="badge badge-maroon">📋 Offline Converter</span>
+    <span class="badge badge-purple">🔄 6 Scripts + IAST</span>
+    <span class="badge badge-maroon">🍎 macOS &amp; 🪟 Windows</span>
+    <span class="badge badge-purple">✈️ 100% Offline</span>
   </div>
 
-  <div class="scripts-row">
-    <span class="script-chip">नमस्कार</span>
-    <span class="script-chip" style="font-family:'Noto Sans Kannada',serif">ನಮಸ್ಕಾರ</span>
-    <span class="script-chip" style="font-family:'Noto Sans Telugu',serif">నమస్కార</span>
-    <span class="script-chip" style="font-family:'Noto Serif Tamil',serif">நமஸ்காரம்</span>
-    <span class="script-chip" style="font-family:'Noto Sans Bengali',serif">নমস্কার</span>
-    <span class="script-chip" style="font-family:'Noto Sans Malayalam',serif">നമസ്കാരം</span>
+  <!-- Animated demo -->
+  <div class="demo-strip animate-up" style="--delay:0.4s">
+    <div class="demo-label">type once → get any script</div>
+    <div class="demo-input">
+      <span class="demo-cursor">namaskaara</span>
+      <span class="demo-arrow">→</span>
+      <div class="demo-outputs">
+        <span class="demo-out" style="font-family:'Noto Serif Devanagari',serif;--i:0">नमस्कार</span>
+        <span class="demo-out" style="font-family:'Noto Sans Kannada',serif;--i:1">ನಮಸ್ಕಾರ</span>
+        <span class="demo-out" style="font-family:'Noto Sans Telugu',serif;--i:2">నమస్కార</span>
+        <span class="demo-out" style="font-family:'Noto Serif Tamil',serif;--i:3">நமஸ்காரம்</span>
+        <span class="demo-out" style="font-family:'Noto Sans Bengali',serif;--i:4">নমস্কার</span>
+        <span class="demo-out" style="font-family:'Noto Sans Malayalam',serif;--i:5">നമസ്കാരം</span>
+        <span class="demo-out demo-iast" style="--i:6">namaskāra</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="platform-row animate-up" style="--delay:0.55s">
+    <span class="platform-chip">🍎 macOS</span>
+    <span class="platform-divider">+</span>
+    <span class="platform-chip">🪟 Windows</span>
+    <span class="platform-note">one app, both platforms</span>
   </div>
 </section>
 
@@ -67,36 +85,15 @@
     </a>
     <details class="gatekeeper-note">
       <summary>⚠️ macOS says "damaged or can't be opened"? Click here</summary>
-      <p style="margin:10px 0 6px;">This is a macOS security warning for apps not yet verified by Apple. The app is completely safe. Here's how to open it:</p>
-
-      <p style="font-weight:700;margin-bottom:6px">Method 1 — Easiest (System Settings)</p>
+      <p style="margin:10px 0 6px;">This is a macOS security warning for apps not verified by Apple. The app is safe. Fix it in seconds:</p>
+      <p style="font-weight:700;margin-bottom:6px">Easiest — System Settings</p>
       <ol style="margin:0 0 12px 16px;display:flex;flex-direction:column;gap:6px;">
-        <li>When the "damaged" dialog appears, click <strong>Cancel</strong></li>
-        <li>Click the <strong>Apple menu</strong> (🍎) in the top-left corner of your screen</li>
-        <li>Click <strong>System Settings</strong></li>
-        <li>Click <strong>Privacy &amp; Security</strong> in the left sidebar</li>
-        <li>Scroll down until you see a message like <em>"Script Tool was blocked"</em></li>
-        <li>Click <strong>Open Anyway</strong> — then click <strong>Open</strong> in the next popup</li>
-        <li>That's it! The app will open and you won't see this warning again ✅</li>
+        <li>Click <strong>Cancel</strong> on the dialog → open <strong>Apple menu → System Settings</strong></li>
+        <li>Go to <strong>Privacy &amp; Security</strong> → scroll down → click <strong>Open Anyway</strong></li>
+        <li>Done ✅</li>
       </ol>
-
-      <p style="font-weight:700;margin-bottom:6px">Method 2 — Right-click trick</p>
-      <ol style="margin:0 0 12px 16px;display:flex;flex-direction:column;gap:6px;">
-        <li>Open your <strong>Applications</strong> folder (Finder → Applications)</li>
-        <li><strong>Right-click</strong> (or hold Control and click) on <strong>Script Tool</strong></li>
-        <li>Choose <strong>Open</strong> from the menu</li>
-        <li>A new dialog appears — click <strong>Open</strong> again</li>
-        <li>Done! ✅</li>
-      </ol>
-
-      <p style="font-weight:700;margin-bottom:6px">Method 3 — Terminal (one command)</p>
-      <ol style="margin:0 0 0 16px;display:flex;flex-direction:column;gap:6px;">
-        <li>Press <strong>Cmd + Space</strong>, type <strong>Terminal</strong>, press Enter</li>
-        <li>Copy and paste this command, then press Enter:<br/>
-          <code style="display:block;margin-top:6px;padding:8px 12px;font-size:12px;user-select:all">xattr -cr "/Applications/Script Tool.app"</code>
-        </li>
-        <li>Close Terminal and double-click the app — it opens normally ✅</li>
-      </ol>
+      <p style="font-weight:700;margin-bottom:6px">Or — one Terminal command</p>
+      <code style="display:block;margin-top:4px;padding:8px 12px;font-size:12px;user-select:all">xattr -cr "/Applications/Script Tool.app"</code>
     </details>
   </div>
 
@@ -115,37 +112,37 @@
 
 <!-- ── Features ── -->
 <section class="features" id="features">
-  <h2>What it does</h2>
+  <h2>Everything you need for Indic scripts</h2>
   <div class="feature-grid">
-    <div class="feature-card">
+    <div class="feature-card" style="--fi:0">
       <div class="icon">⌨️</div>
-      <h4>Sanskrit IME — type anywhere</h4>
-      <p>Toggle a system-wide Sanskrit input mode with <code>⌥⇧M</code>. Type phonetic Roman in any app — WhatsApp, Notion, Word, browser — and get Indic script inserted directly, no copy-paste needed.</p>
+      <h4>Inline IME — type in any app</h4>
+      <p>A system-wide input method that intercepts your keystrokes. Type phonetic Roman, get Indic script inserted <strong>directly</strong> into WhatsApp, Notion, Word, browser — no switching windows, no copy-paste.</p>
     </div>
-    <div class="feature-card">
-      <div class="icon">🔡</div>
-      <h4>7 output scripts</h4>
-      <p>Devanagari, Kannada, Telugu, Tamil, Bengali, Malayalam, and IAST. Switch scripts instantly from the tray menu or with <code>⌥⇧O</code>.</p>
+    <div class="feature-card" style="--fi:1">
+      <div class="icon">🔄</div>
+      <h4>6 scripts + IAST output</h4>
+      <p>Devanagari, Kannada, Telugu, Tamil, Bengali, Malayalam, and IAST — all from the same phonetic input. Switch the output script instantly mid-sentence with <code>⌥⇧O</code>.</p>
     </div>
-    <div class="feature-card">
-      <div class="icon">🔤</div>
-      <h4>3 input schemes</h4>
-      <p>ITRANS, Harvard-Kyoto, and SLP1 — the most widely used phonetic Sanskrit schemes. Switch on the fly with <code>⌥⇧1 / 2 / 3</code>.</p>
+    <div class="feature-card" style="--fi:2">
+      <div class="icon">📋</div>
+      <h4>Offline converter with dual output</h4>
+      <p>Open the full converter window (<code>⌥⇧I</code>) to see <strong>both</strong> your chosen Indic script and its IAST transliteration side by side. Copy either with one click.</p>
     </div>
-    <div class="feature-card">
-      <div class="icon">🪟</div>
-      <h4>Quick panel</h4>
-      <p>Press <code>⌥⇧S</code> for a floating mini-panel — type a word, preview the output, press Enter to paste. Disappears when done.</p>
+    <div class="feature-card" style="--fi:3">
+      <div class="icon">⚡</div>
+      <h4>Quick floating panel</h4>
+      <p>Press <code>⌥⇧S</code> for a lightweight overlay — type a word, see the live preview, press Enter to paste instantly into whatever app is behind it.</p>
     </div>
-    <div class="feature-card">
+    <div class="feature-card" style="--fi:4">
+      <div class="icon">🖥️</div>
+      <h4>macOS &amp; Windows</h4>
+      <p>One app, both platforms. The converter and quick panel work on both. The system-wide IME is macOS-native; Windows users get the converter and panel.</p>
+    </div>
+    <div class="feature-card" style="--fi:5">
       <div class="icon">✈️</div>
-      <h4>100% offline</h4>
-      <p>No internet required. No data leaves your machine. Works on planes, in remote areas, everywhere.</p>
-    </div>
-    <div class="feature-card">
-      <div class="icon">📌</div>
-      <h4>Lives in the menu bar</h4>
-      <p>Always one click away. No dock clutter. Launches at login so it's always ready.</p>
+      <h4>Fully offline, always ready</h4>
+      <p>Zero internet required. No accounts, no telemetry, no subscriptions. Lives in your menu bar and launches at login — always one hotkey away.</p>
     </div>
   </div>
 </section>
@@ -153,40 +150,71 @@
 <!-- ── How it works ── -->
 <section class="section" id="how-it-works">
   <h2>How it works</h2>
-  <div class="steps">
-    <div class="step">
-      <div class="step-num">1</div>
-      <div class="step-body">
-        <h4>Install &amp; launch</h4>
-        <p>Download and run the installer. Script Tool appears in your menu bar automatically and launches at login.</p>
+  <div class="mode-tabs">
+    <div class="mode-tab">
+      <div class="mode-tab-head">
+        <span class="mode-num">A</span>
+        <h3>Inline IME — type anywhere <span class="platform-tag">macOS</span></h3>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <h4>Install &amp; grant Accessibility</h4>
+            <p>Download and run the installer. On first launch go to <strong>System Settings → Privacy &amp; Security → Accessibility</strong> and enable Script Tool — this lets it intercept keystrokes system-wide.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <h4>Toggle IME with <code>⌥⇧M</code></h4>
+            <p>A slim status bar appears at the top of your screen showing the active scheme and script. Click into any text field in any app.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <h4>Type, see live preview, commit</h4>
+            <p>Type <code>namaskaara</code> → the bar shows <em>namaskaara → नमस्कार</em> live. Press <kbd>Space</kbd> — the converted word is inserted directly. Continue typing the next word immediately.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <div class="step-body">
+            <h4>Switch script or scheme anytime</h4>
+            <p>Press <code>⌥⇧O</code> to cycle through all 7 scripts, or <code>⌥⇧1/2/3</code> to switch between ITRANS, Harvard-Kyoto, and SLP1 — without leaving your app.</p>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="step">
-      <div class="step-num">2</div>
-      <div class="step-body">
-        <h4>Grant Accessibility permission (macOS IME)</h4>
-        <p>On first launch, macOS will prompt you to grant Accessibility access in <strong>System Settings → Privacy &amp; Security → Accessibility</strong>. This is required for the IME to intercept keystrokes system-wide.</p>
+
+    <div class="mode-tab">
+      <div class="mode-tab-head">
+        <span class="mode-num">B</span>
+        <h3>Offline Converter — copy &amp; paste <span class="platform-tag">macOS + Windows</span></h3>
       </div>
-    </div>
-    <div class="step">
-      <div class="step-num">3</div>
-      <div class="step-body">
-        <h4>Toggle the Sanskrit IME</h4>
-        <p>Press <code>⌥⇧M</code> — a small status bar appears at the top of your screen. Click into any text field in any app and start typing phonetic Sanskrit.</p>
-      </div>
-    </div>
-    <div class="step">
-      <div class="step-num">4</div>
-      <div class="step-body">
-        <h4>Type and commit words</h4>
-        <p>Type <code>namaskaara</code> → the status bar shows <em>namaskaara → नमस्कार</em> live. Press <kbd>Space</kbd> to insert the converted word and continue, or <kbd>Esc</kbd> to cancel.</p>
-      </div>
-    </div>
-    <div class="step">
-      <div class="step-num">5</div>
-      <div class="step-body">
-        <h4>Use the converter window or quick panel</h4>
-        <p>Press <code>⌥⇧I</code> for the full converter window, or <code>⌥⇧S</code> for a floating quick panel — type, preview, press Enter to paste into whatever app is behind it.</p>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <h4>Open the converter (<code>⌥⇧I</code>)</h4>
+            <p>Press the hotkey anywhere to bring up the full converter window, or click the tray icon.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <h4>Type phonetic text</h4>
+            <p>Type using ITRANS, Harvard-Kyoto, or SLP1. The output in your chosen Indic script and IAST appear side by side instantly.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <h4>Copy and paste anywhere</h4>
+            <p>Click Copy on either output — Indic script or IAST — and paste into any document, email, or message.</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -207,12 +235,12 @@
       <div class="kbd-group"><kbd>⌥</kbd><kbd>⇧</kbd><kbd>S</kbd></div>
     </div>
     <div class="shortcut-row">
-      <span>Toggle Sanskrit IME on/off</span>
+      <span>Toggle Indic IME on/off</span>
       <div class="kbd-group"><kbd>⌥</kbd><kbd>⇧</kbd><kbd>M</kbd></div>
     </div>
   </div>
 
-  <p class="shortcuts-sub" style="margin-top:28px">While Sanskrit IME is active</p>
+  <p class="shortcuts-sub" style="margin-top:28px">While IME is active <span class="platform-tag">macOS</span></p>
   <div class="shortcut-table">
     <div class="shortcut-row">
       <span>Switch to ITRANS scheme</span>
@@ -252,12 +280,11 @@
 <!-- ── Footer ── -->
 <footer>
   <p>
-    Script Tool is open source under the MIT License.
+    Script Tool is free and open source.
     &nbsp;·&nbsp;
-    <!-- Replace with your actual GitHub repo URL -->
     <a href="https://github.com/kshamabn25-collab/script-tool" target="_blank">View on GitHub</a>
     &nbsp;·&nbsp;
-    Built with <a href="https://tauri.app" target="_blank">Tauri</a> &amp; <a href="https://github.com/indic-transliteration/sanscript.js" target="_blank">sanscript.js</a>
+    Built with <a href="https://tauri.app" target="_blank">Tauri</a>
   </p>
 </footer>
 
