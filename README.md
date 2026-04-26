@@ -23,7 +23,12 @@ A free, offline menu-bar app for typing Sanskrit and other Indic scripts — wor
 
 > If macOS says "cannot be verified", right-click the installer → Open → Open.
 
-**Windows:** Not yet supported — the Sanskrit IME relies on macOS-only system APIs. Windows support is planned for a future release.
+**Windows:**
+1. Download `Script Tool_x.x.x_x64-setup.exe` from the release
+2. Double-click to install — if Windows SmartScreen appears, click **More info → Run anyway**
+3. Script Tool starts in the system tray (bottom-right notification area)
+
+> Note: The global Sanskrit IME (`Alt+Shift+M`) is macOS-only. On Windows, use the converter window (`Alt+Shift+I`) and quick panel (`Alt+Shift+S`) to transliterate and paste.
 
 ## Keyboard Shortcuts
 
