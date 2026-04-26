@@ -29,6 +29,3 @@ npm-debug.log*
 *.njsproj
 *.sln
 *.sw?
-
-# GitHub Actions (not needed without source)
-.github/
