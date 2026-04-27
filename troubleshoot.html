@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Troubleshooting — Script Tool</title>
+  <meta name="description" content="Fix common issues with Script Tool on macOS and Windows — Gatekeeper, Accessibility, SmartScreen, and keyboard shortcuts." />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Devanagari&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+<!-- ── Navigation ── -->
+<nav>
+  <div class="nav-brand">
+    <span>ॐ</span> Script Tool
+  </div>
+  <ul class="nav-links">
+    <li><a href="index.html#download">Download</a></li>
+    <li><a href="index.html#features">Features</a></li>
+    <li><a href="index.html#how-it-works">How it works</a></li>
+    <li><a href="index.html#shortcuts">Shortcuts</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="troubleshoot.html" class="nav-active">Troubleshoot</a></li>
+    <li><a href="https://github.com/kshamabn25-collab/script-tool" target="_blank">GitHub ↗</a></li>
+  </ul>
+</nav>
+
+<!-- ── Page header ── -->
+<div class="ts-page-header">
+  <h1>Troubleshooting</h1>
+  <p>Common setup issues on macOS and Windows — with step-by-step fixes.</p>
+  <a href="index.html#download" class="dl-btn ts-back-btn">← Back to Download</a>
+</div>
+
+<!-- ── Jump links ── -->
+<div class="ts-jump-bar">
+  <a href="#mac-gatekeeper">🍎 App won't open</a>
+  <a href="#mac-accessibility">🍎 IME not typing</a>
+  <a href="#windows-smartscreen">🪟 SmartScreen block</a>
+  <a href="#shortcuts-not-working">⌨️ Shortcuts not working</a>
+</div>
+
+<!-- ── Section 1: macOS Gatekeeper ── -->
+<section class="ts-section" id="mac-gatekeeper">
+  <div class="ts-section-inner">
+    <span class="ts-badge ts-badge-mac">macOS</span>
+    <h2>"Script Tool is damaged and can't be opened" or "cannot be verified"</h2>
+    <p class="ts-intro">macOS Gatekeeper blocks apps that aren't signed with an Apple Developer certificate. Script Tool is safe — this is a false positive. Use one of the methods below to open it.</p>
+
+    <h4>Method 1 — System Settings <span class="ts-recommended">(recommended)</span></h4>
+    <ol class="ts-steps">
+      <li>When the alert appears, click <strong>Cancel</strong> (don't click Move to Trash).</li>
+      <li>Open <strong>Apple menu → System Settings</strong>.</li>
+      <li>Click <strong>Privacy &amp; Security</strong> in the sidebar.</li>
+      <li>Scroll down — you'll see <em>"Script Tool was blocked from use because it is not from an identified developer."</em></li>
+      <li>Click <strong>Open Anyway</strong>, then confirm with <strong>Open</strong> in the dialog that appears.</li>
+      <li>Script Tool will open normally from now on.</li>
+    </ol>
+    <figure class="ts-screenshot-slot">
+      <div class="ts-screenshot-placeholder">[Screenshot: System Settings → Privacy &amp; Security → "Open Anyway" button highlighted]</div>
+      <figcaption>System Settings → Privacy &amp; Security → Open Anyway</figcaption>
+    </figure>
+
+    <h4>Method 2 — Right-click trick</h4>
+    <ol class="ts-steps">
+      <li>In Finder, <strong>right-click</strong> (or Ctrl-click) on <em>Script Tool.app</em>.</li>
+      <li>Select <strong>Open</strong> from the context menu.</li>
+      <li>A new dialog appears with an <strong>Open</strong> button — click it.</li>
+      <li>Script Tool opens and is now whitelisted permanently.</li>
+    </ol>
+    <figure class="ts-screenshot-slot">
+      <div class="ts-screenshot-placeholder">[Screenshot: Finder right-click menu with "Open" selected, and the secondary dialog with the Open button]</div>
+      <figcaption>Right-click → Open → click Open in the confirmation dialog</figcaption>
+    </figure>
+
+    <h4>Method 3 — Terminal (one command)</h4>
+    <ol class="ts-steps">
+      <li>Press <kbd>Cmd+Space</kbd>, type <strong>Terminal</strong>, press <kbd>Return</kbd>.</li>
+      <li>Paste and run:</li>
+    </ol>
+    <code class="ts-code-block">xattr -cr "/Applications/Script Tool.app"</code>
+    <p class="ts-note">This removes the quarantine flag that triggers the Gatekeeper warning.</p>
+  </div>
+</section>
+
+<!-- ── Section 2: macOS Accessibility ── -->
+<section class="ts-section" id="mac-accessibility">
+  <div class="ts-section-inner">
+    <span class="ts-badge ts-badge-mac">macOS</span>
+    <h2>Sanskrit IME is ON but nothing types / keystrokes aren't intercepted</h2>
+    <p class="ts-intro">The global Sanskrit IME requires <strong>Accessibility permission</strong> to intercept keystrokes system-wide. Without it, pressing <kbd>Alt+Shift+M</kbd> activates the HUD bar but keys still go to the app as normal text.</p>
+
+    <ol class="ts-steps">
+      <li>Open <strong>Apple menu → System Settings</strong>.</li>
+      <li>Click <strong>Privacy &amp; Security</strong> in the sidebar.</li>
+      <li>Click <strong>Accessibility</strong>.</li>
+      <li>Find <strong>Script Tool</strong> in the list.</li>
+      <li>Toggle the switch to <strong>ON</strong> (blue).</li>
+      <li>You may be prompted for your Mac password — enter it.</li>
+      <li>Quit and relaunch Script Tool, then try <kbd>Alt+Shift+M</kbd> again.</li>
+    </ol>
+    <figure class="ts-screenshot-slot">
+      <div class="ts-screenshot-placeholder">[Screenshot: System Settings → Privacy &amp; Security → Accessibility list with "Script Tool" toggle switched ON]</div>
+      <figcaption>Accessibility list — Script Tool toggle must be ON</figcaption>
+    </figure>
+
+    <p class="ts-note">If Script Tool doesn't appear in the list, try toggling the IME once (<kbd>Alt+Shift+M</kbd>) — this triggers the permission prompt which adds it to the list.</p>
+  </div>
+</section>
+
+<!-- ── Section 3: Windows SmartScreen ── -->
+<section class="ts-section" id="windows-smartscreen">
+  <div class="ts-section-inner">
+    <span class="ts-badge ts-badge-win">Windows</span>
+    <h2>Windows SmartScreen says "Windows protected your PC"</h2>
+    <p class="ts-intro">Windows Defender SmartScreen warns about installers that don't have a paid Extended Validation (EV) certificate. Script Tool is safe. Follow the steps below.</p>
+
+    <ol class="ts-steps">
+      <li>Double-click the downloaded <em>Sanskrit-Tool-windows.exe</em>.</li>
+      <li>When the blue SmartScreen dialog appears, click <strong>More info</strong> (bottom-left text link).</li>
+      <li>A <strong>Run anyway</strong> button appears — click it.</li>
+      <li>The installer proceeds normally.</li>
+    </ol>
+    <figure class="ts-screenshot-slot">
+      <div class="ts-screenshot-placeholder">[Screenshot: SmartScreen dialog — blue screen with "More info" link circled, and the follow-up screen with "Run anyway" button highlighted]</div>
+      <figcaption>SmartScreen → More info → Run anyway</figcaption>
+    </figure>
+
+    <p class="ts-note">If you see a User Account Control (UAC) prompt asking "Do you want to allow this app to make changes?" — click <strong>Yes</strong>. This is normal for any installer.</p>
+  </div>
+</section>
+
+<!-- ── Section 4: Shortcuts not working ── -->
+<section class="ts-section" id="shortcuts-not-working">
+  <div class="ts-section-inner">
+    <span class="ts-badge ts-badge-both">macOS &amp; Windows</span>
+    <h2>Global shortcuts (Alt+Shift+I, Alt+Shift+M…) don't respond</h2>
+    <p class="ts-intro">Global shortcuts can be blocked by another app that already registered the same combination, or by the OS itself.</p>
+
+    <h4>Check Script Tool is running</h4>
+    <ol class="ts-steps">
+      <li><strong>macOS:</strong> look for the <span class="ts-inline-symbol">ॐ</span> icon in the menu bar (top-right of your screen).</li>
+      <li><strong>Windows:</strong> look for the <span class="ts-inline-symbol">ॐ</span> icon in the system tray (bottom-right, expand hidden icons with the ^ arrow).</li>
+      <li>If the icon isn't there, Script Tool isn't running — open it from Applications (macOS) or the Start Menu (Windows).</li>
+    </ol>
+    <figure class="ts-screenshot-slot">
+      <div class="ts-screenshot-placeholder">[Screenshot: macOS menu bar with ॐ icon visible · Windows system tray with ॐ icon visible]</div>
+      <figcaption>The ॐ icon should be visible when Script Tool is running</figcaption>
+    </figure>
+
+    <h4>Check for conflicting apps</h4>
+    <ol class="ts-steps">
+      <li>Another app (window managers, Logitech Options, Raycast, AltTab, etc.) may have claimed <kbd>Alt+Shift+I</kbd> or <kbd>Alt+Shift+S</kbd>.</li>
+      <li>Quit the suspected conflicting app and try the shortcuts again.</li>
+      <li>On <strong>Windows</strong>: <kbd>Alt+Shift</kbd> alone switches the keyboard input language if you have multiple languages installed. This shouldn't block <kbd>Alt+Shift+I</kbd> combos, but if it does — go to <em>Settings → Time &amp; Language → Language &amp; Region</em> and remove extra keyboard layouts, or change the language-switch hotkey to something else.</li>
+    </ol>
+
+    <h4>Restart Script Tool</h4>
+    <ol class="ts-steps">
+      <li>Click the <span class="ts-inline-symbol">ॐ</span> tray icon → <strong>Quit</strong>.</li>
+      <li>Reopen Script Tool.</li>
+      <li>Try the shortcut again.</li>
+    </ol>
+
+    <div class="ts-still-stuck">
+      <p>Still stuck? <a href="https://github.com/kshamabn25-collab/script-tool/issues" target="_blank">Open an issue on GitHub ↗</a> and describe your OS version and which shortcut isn't working.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── Footer ── -->
+<footer>
+  <p>
+    Script Tool is free and open source.
+    &nbsp;·&nbsp;
+    <a href="https://github.com/kshamabn25-collab/script-tool" target="_blank">View on GitHub</a>
+    &nbsp;·&nbsp;
+    Built with <a href="https://tauri.app" target="_blank">Tauri</a>
+  </p>
+</footer>
+
+</body>
+</html>
