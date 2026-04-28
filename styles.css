@@ -684,3 +684,268 @@ kbd {
 
 /* Active nav link */
 .nav-active { color: var(--purple) !important; font-weight: 600; }
+
+/* ── Platform setup link (replaces "Having trouble?") ─────────────────────── */
+.platform-setup-link {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--purple-mid);
+  text-decoration: none;
+  text-align: center;
+  margin-top: 2px;
+}
+.platform-setup-link:hover { text-decoration: underline; color: var(--purple); }
+
+/* ── Platform page header ─────────────────────────────────────────────────── */
+.platform-page-header {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 52px 24px 36px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.platform-page-icon { font-size: 48px; }
+.platform-page-header h1 { font-size: 34px; font-weight: 800; color: var(--text); }
+.platform-page-header p  { font-size: 14px; color: var(--text-dim); margin-bottom: 6px; }
+
+/* ── Platform sections ────────────────────────────────────────────────────── */
+.platform-section {
+  padding: 52px 24px;
+  border-top: 1px solid var(--border);
+}
+.platform-section-alt { background: var(--bg2); }
+
+.platform-section-inner {
+  max-width: 760px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.platform-section-inner > h2 {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--text);
+}
+.section-intro {
+  font-size: 14px;
+  color: var(--text-dim);
+  line-height: 1.65;
+  margin-top: -16px;
+}
+
+/* ── Install steps ────────────────────────────────────────────────────────── */
+.install-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.install-step {
+  display: flex;
+  gap: 20px;
+  padding: 28px 0;
+  border-bottom: 1px solid var(--border);
+}
+.install-step:last-child { border-bottom: none; }
+
+.install-step-num {
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+  border-radius: 50%;
+  background: var(--maroon);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2px;
+}
+.install-step-body {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+}
+.install-step-body h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.3;
+}
+.install-step-body p {
+  font-size: 14px;
+  color: var(--text-dim);
+  line-height: 1.65;
+}
+.install-step-body ol {
+  margin-left: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 14px;
+  color: var(--text-dim);
+  line-height: 1.6;
+}
+.install-step-body ol li strong { color: var(--text); }
+.install-step-body ol li em     { font-style: italic; }
+
+.install-code {
+  display: block;
+  font-family: "SF Mono", "Consolas", monospace;
+  font-size: 13px;
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 12px 16px;
+  color: var(--maroon);
+  user-select: all;
+}
+.install-note {
+  font-size: 12px !important;
+  color: var(--text-dimmer) !important;
+}
+
+.required-tag {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  background: #fef3c7;
+  color: #92400e;
+  border: 1px solid #fde68a;
+  border-radius: 4px;
+  padding: 1px 6px;
+  margin-left: 8px;
+  vertical-align: middle;
+}
+.recommended-tag {
+  font-size: 10px;
+  font-weight: 600;
+  background: var(--purple-light);
+  color: var(--purple-mid);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 1px 6px;
+  margin-left: 8px;
+  vertical-align: middle;
+}
+.tray-icon {
+  font-size: 15px;
+  color: var(--maroon);
+}
+
+/* ── Method blocks (Chrome / Edge sub-steps etc.) ─────────────────────────── */
+.method-block {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.method-block h4 {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.method-block ol {
+  margin-left: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 13px;
+  color: var(--text-dim);
+  line-height: 1.55;
+}
+.method-block ol li strong { color: var(--text); }
+.method-block ol li em     { font-style: italic; }
+
+/* ── Usage tabs (get started sections) ───────────────────────────────────── */
+.usage-tabs {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.usage-tab {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.usage-tab-head {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 20px 24px 16px;
+  background: var(--bg3);
+  border-bottom: 1px solid var(--border);
+}
+.usage-tab-head h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+.usage-sub {
+  font-size: 13px;
+  color: var(--text-dim);
+  line-height: 1.5;
+}
+.usage-tab .steps {
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* ── Troubleshoot ordered steps (numbered with circle) ───────────────────── */
+.ts-ordered-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.ts-ordered-step {
+  display: flex;
+  gap: 20px;
+  padding: 28px 0;
+  border-bottom: 1px solid var(--border);
+}
+.ts-ordered-step:last-child { border-bottom: none; }
+.ts-ordered-step-num {
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+  border-radius: 50%;
+  background: var(--purple);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2px;
+}
+.ts-ordered-step-body {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+}
+.ts-ordered-step-body h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text);
+}
+.ts-ordered-step-body p {
+  font-size: 14px;
+  color: var(--text-dim);
+  line-height: 1.65;
+}

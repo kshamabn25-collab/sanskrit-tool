@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Script Tool — Type Indic Scripts in Any App</title>
-  <meta name="description" content="Free offline app for typing Sanskrit and all Indic scripts anywhere. System-wide IME + offline converter. 6 scripts + IAST. macOS & Windows." />
+  <meta name="description" content="Free offline app for typing Sanskrit and all Indic scripts anywhere. System-wide IME + offline converter. 6 scripts + IAST. macOS &amp; Windows." />
   <link rel="stylesheet" href="styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Devanagari&family=Noto+Sans+Kannada&family=Noto+Sans+Telugu&family=Noto+Serif+Tamil&family=Noto+Sans+Bengali&family=Noto+Sans+Malayalam&display=swap" rel="stylesheet" />
@@ -19,8 +19,8 @@
   <ul class="nav-links">
     <li><a href="#download">Download</a></li>
     <li><a href="#features">Features</a></li>
-    <li><a href="#how-it-works">How it works</a></li>
-    <li><a href="#shortcuts">Shortcuts</a></li>
+    <li><a href="mac.html">macOS</a></li>
+    <li><a href="windows.html">Windows</a></li>
     <li><a href="about.html">About</a></li>
     <li><a href="troubleshoot.html">Troubleshoot</a></li>
     <li><a href="https://github.com/kshamabn25-collab/script-tool" target="_blank">GitHub ↗</a></li>
@@ -33,12 +33,8 @@
   <h1 class="animate-up" style="--delay:0.1s">
     Type in Any Indic Script.<br/>In Any App. On Any Platform.
   </h1>
-  <p class="hero-sub animate-up" style="--delay:0.2s">
-    A system-wide IME that converts <em>as you type</em> — inline, directly inside WhatsApp, Notion, Word, or any app.<br/>
-    Plus a full offline converter for copy-paste — with simultaneous IAST output. Free. No account. No internet.
-  </p>
 
-  <div class="hero-badges animate-up" style="--delay:0.3s">
+  <div class="hero-badges animate-up" style="--delay:0.2s">
     <span class="badge badge-purple">⌨️ Inline IME</span>
     <span class="badge badge-maroon">📋 Offline Converter</span>
     <span class="badge badge-purple">🔄 6 Scripts + IAST</span>
@@ -47,7 +43,7 @@
   </div>
 
   <!-- Animated demo -->
-  <div class="demo-strip animate-up" style="--delay:0.4s">
+  <div class="demo-strip animate-up" style="--delay:0.3s">
     <div class="demo-label">type once → get any script</div>
     <div class="demo-input">
       <span class="demo-cursor">namaskaara</span>
@@ -64,7 +60,7 @@
     </div>
   </div>
 
-  <div class="platform-row animate-up" style="--delay:0.55s">
+  <div class="platform-row animate-up" style="--delay:0.45s">
     <span class="platform-chip">🍎 macOS</span>
     <span class="platform-divider">+</span>
     <span class="platform-chip">🪟 Windows</span>
@@ -84,19 +80,7 @@
     <a class="dl-btn secondary" href="https://github.com/kshamabn25-collab/script-tool/releases">
       All releases
     </a>
-    <a class="ts-help-link" href="troubleshoot.html#mac-gatekeeper">Having trouble opening the app? →</a>
-    <details class="gatekeeper-note">
-      <summary>⚠️ macOS says "damaged or can't be opened"? Click here</summary>
-      <p style="margin:10px 0 6px;">This is a macOS security warning for apps not verified by Apple. The app is safe. Fix it in seconds:</p>
-      <p style="font-weight:700;margin-bottom:6px">Easiest — System Settings</p>
-      <ol style="margin:0 0 12px 16px;display:flex;flex-direction:column;gap:6px;">
-        <li>Click <strong>Cancel</strong> on the dialog → open <strong>Apple menu → System Settings</strong></li>
-        <li>Go to <strong>Privacy &amp; Security</strong> → scroll down → click <strong>Open Anyway</strong></li>
-        <li>Done ✅</li>
-      </ol>
-      <p style="font-weight:700;margin-bottom:6px">Or — one Terminal command</p>
-      <code style="display:block;margin-top:4px;padding:8px 12px;font-size:12px;user-select:all">xattr -cr "/Applications/Script Tool.app"</code>
-    </details>
+    <a class="platform-setup-link" href="mac.html">→ Installation &amp; setup guide</a>
   </div>
 
   <div class="dl-card">
@@ -109,7 +93,7 @@
     <a class="dl-btn secondary" href="https://github.com/kshamabn25-collab/script-tool/releases">
       All releases
     </a>
-    <a class="ts-help-link" href="troubleshoot.html#windows-smartscreen">Windows blocking the installer? →</a>
+    <a class="platform-setup-link" href="windows.html">→ Installation &amp; setup guide</a>
   </div>
 </section>
 
@@ -120,162 +104,32 @@
     <div class="feature-card" style="--fi:0">
       <div class="icon">⌨️</div>
       <h4>Inline IME — type in any app</h4>
-      <p>A system-wide input method that intercepts your keystrokes. Type phonetic Roman, get Indic script inserted <strong>directly</strong> into WhatsApp, Notion, Word, browser — no switching windows, no copy-paste.</p>
+      <p>A system-wide input method that intercepts your keystrokes. Type phonetic Roman and get Indic script inserted <strong>directly</strong> into any app — WhatsApp, Notion, Word, browser — with no window switching or copy-pasting.</p>
     </div>
     <div class="feature-card" style="--fi:1">
       <div class="icon">🔄</div>
-      <h4>6 scripts + IAST output</h4>
-      <p>Devanagari, Kannada, Telugu, Tamil, Bengali, Malayalam, and IAST — all from the same phonetic input. Switch the output script instantly mid-sentence with <code>⌥⇧O</code>.</p>
+      <h4>6 scripts + IAST</h4>
+      <p>Devanagari, Kannada, Telugu, Tamil, Bengali, Malayalam, and IAST — all from the same phonetic input. Switch scripts instantly with <code>Alt+Shift+O</code> without leaving what you're typing.</p>
     </div>
     <div class="feature-card" style="--fi:2">
       <div class="icon">📋</div>
       <h4>Offline converter with dual output</h4>
-      <p>Open the full converter window (<code>⌥⇧I</code>) to see <strong>both</strong> your chosen Indic script and its IAST transliteration side by side. Copy either with one click.</p>
+      <p>Press <code>Alt+Shift+I</code> to open the full converter window. See your chosen Indic script and its IAST transliteration <strong>side by side</strong>. Copy either with one click.</p>
     </div>
     <div class="feature-card" style="--fi:3">
       <div class="icon">⚡</div>
       <h4>Quick floating panel</h4>
-      <p>Press <code>⌥⇧S</code> for a lightweight overlay — type a word, see the live preview, press Enter to paste instantly into whatever app is behind it.</p>
+      <p>Press <code>Alt+Shift+S</code> for a lightweight overlay — type a word, see the live preview, press Enter and it's pasted directly into whatever app is behind it.</p>
     </div>
     <div class="feature-card" style="--fi:4">
       <div class="icon">🖥️</div>
       <h4>macOS &amp; Windows</h4>
-      <p>One app, both platforms. The converter and quick panel work on both. The system-wide IME is macOS-native; Windows users get the converter and panel.</p>
+      <p>One app, both platforms. The inline IME, offline converter, and quick panel all work on macOS and Windows. Inline typing inserts text directly — no clipboard required.</p>
     </div>
     <div class="feature-card" style="--fi:5">
       <div class="icon">✈️</div>
       <h4>Fully offline, always ready</h4>
-      <p>Zero internet required. No accounts, no telemetry, no subscriptions. Lives in your menu bar and launches at login — always one hotkey away.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ── How it works ── -->
-<section class="section" id="how-it-works">
-  <h2>How it works</h2>
-  <div class="mode-tabs">
-    <div class="mode-tab">
-      <div class="mode-tab-head">
-        <span class="mode-num">A</span>
-        <h3>Inline IME — type anywhere <span class="platform-tag">macOS</span></h3>
-      </div>
-      <div class="steps">
-        <div class="step">
-          <div class="step-num">1</div>
-          <div class="step-body">
-            <h4>Install &amp; grant Accessibility</h4>
-            <p>Download and run the installer. On first launch go to <strong>System Settings → Privacy &amp; Security → Accessibility</strong> and enable Script Tool — this lets it intercept keystrokes system-wide.</p>
-          </div>
-        </div>
-        <div class="step">
-          <div class="step-num">2</div>
-          <div class="step-body">
-            <h4>Toggle IME with <code>⌥⇧M</code></h4>
-            <p>A slim status bar appears at the top of your screen showing the active scheme and script. Click into any text field in any app.</p>
-          </div>
-        </div>
-        <div class="step">
-          <div class="step-num">3</div>
-          <div class="step-body">
-            <h4>Type, see live preview, commit</h4>
-            <p>Type <code>namaskaara</code> → the bar shows <em>namaskaara → नमस्कार</em> live. Press <kbd>Space</kbd> — the converted word is inserted directly. Continue typing the next word immediately.</p>
-          </div>
-        </div>
-        <div class="step">
-          <div class="step-num">4</div>
-          <div class="step-body">
-            <h4>Switch script or scheme anytime</h4>
-            <p>Press <code>⌥⇧O</code> to cycle through all 7 scripts, or <code>⌥⇧1/2/3</code> to switch between ITRANS, Harvard-Kyoto, and SLP1 — without leaving your app.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="mode-tab">
-      <div class="mode-tab-head">
-        <span class="mode-num">B</span>
-        <h3>Offline Converter — copy &amp; paste <span class="platform-tag">macOS + Windows</span></h3>
-      </div>
-      <div class="steps">
-        <div class="step">
-          <div class="step-num">1</div>
-          <div class="step-body">
-            <h4>Open the converter (<code>⌥⇧I</code>)</h4>
-            <p>Press the hotkey anywhere to bring up the full converter window, or click the tray icon.</p>
-          </div>
-        </div>
-        <div class="step">
-          <div class="step-num">2</div>
-          <div class="step-body">
-            <h4>Type phonetic text</h4>
-            <p>Type using ITRANS, Harvard-Kyoto, or SLP1. The output in your chosen Indic script and IAST appear side by side instantly.</p>
-          </div>
-        </div>
-        <div class="step">
-          <div class="step-num">3</div>
-          <div class="step-body">
-            <h4>Copy and paste anywhere</h4>
-            <p>Click Copy on either output — Indic script or IAST — and paste into any document, email, or message.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ── Keyboard Shortcuts ── -->
-<section class="shortcuts" id="shortcuts">
-  <h2>Keyboard Shortcuts</h2>
-
-  <p class="shortcuts-sub">Global — work from any app, always active</p>
-  <div class="shortcut-table">
-    <div class="shortcut-row">
-      <span>Open converter window</span>
-      <div class="kbd-group"><kbd>⌥</kbd><kbd>⇧</kbd><kbd>I</kbd></div>
-    </div>
-    <div class="shortcut-row">
-      <span>Open quick panel</span>
-      <div class="kbd-group"><kbd>⌥</kbd><kbd>⇧</kbd><kbd>S</kbd></div>
-    </div>
-    <div class="shortcut-row">
-      <span>Toggle Indic IME on/off</span>
-      <div class="kbd-group"><kbd>⌥</kbd><kbd>⇧</kbd><kbd>M</kbd></div>
-    </div>
-  </div>
-
-  <p class="shortcuts-sub" style="margin-top:28px">While IME is active <span class="platform-tag">macOS</span></p>
-  <div class="shortcut-table">
-    <div class="shortcut-row">
-      <span>Switch to ITRANS scheme</span>
-      <div class="kbd-group"><kbd>⌥</kbd><kbd>⇧</kbd><kbd>1</kbd></div>
-    </div>
-    <div class="shortcut-row">
-      <span>Switch to Harvard-Kyoto scheme</span>
-      <div class="kbd-group"><kbd>⌥</kbd><kbd>⇧</kbd><kbd>2</kbd></div>
-    </div>
-    <div class="shortcut-row">
-      <span>Switch to SLP1 scheme</span>
-      <div class="kbd-group"><kbd>⌥</kbd><kbd>⇧</kbd><kbd>3</kbd></div>
-    </div>
-    <div class="shortcut-row">
-      <span>Cycle output script</span>
-      <div class="kbd-group"><kbd>⌥</kbd><kbd>⇧</kbd><kbd>O</kbd></div>
-    </div>
-    <div class="shortcut-row">
-      <span>Commit word + space</span>
-      <div class="kbd-group"><kbd>Space</kbd></div>
-    </div>
-    <div class="shortcut-row">
-      <span>Commit word + newline</span>
-      <div class="kbd-group"><kbd>Enter</kbd></div>
-    </div>
-    <div class="shortcut-row">
-      <span>Delete last phonetic character</span>
-      <div class="kbd-group"><kbd>⌫</kbd></div>
-    </div>
-    <div class="shortcut-row">
-      <span>Cancel and exit IME</span>
-      <div class="kbd-group"><kbd>Esc</kbd></div>
+      <p>Zero internet required. No accounts, no telemetry, no subscriptions. Lives in your menu bar or system tray and launches at login — always one hotkey away.</p>
     </div>
   </div>
 </section>

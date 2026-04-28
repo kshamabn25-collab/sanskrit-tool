@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Script Tool — macOS Guide</title>
+  <meta name="description" content="Install Script Tool on macOS — setup, troubleshooting, how to use the IME and converter, keyboard shortcuts." />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Devanagari&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+<!-- ── Navigation ── -->
+<nav>
+  <div class="nav-brand"><span>ॐ</span> Script Tool</div>
+  <ul class="nav-links">
+    <li><a href="index.html#download">Download</a></li>
+    <li><a href="index.html#features">Features</a></li>
+    <li><a href="mac.html" class="nav-active">macOS</a></li>
+    <li><a href="windows.html">Windows</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="troubleshoot.html">Troubleshoot</a></li>
+    <li><a href="https://github.com/kshamabn25-collab/script-tool" target="_blank">GitHub ↗</a></li>
+  </ul>
+</nav>
+
+<!-- ── Page header ── -->
+<div class="platform-page-header">
+  <div class="platform-page-icon">🍎</div>
+  <h1>Script Tool for macOS</h1>
+  <p>macOS 11 Big Sur or later &nbsp;·&nbsp; Apple Silicon &amp; Intel</p>
+  <a class="dl-btn" href="https://github.com/kshamabn25-collab/script-tool/releases/latest/download/Script-Tool-mac.dmg">
+    Download .dmg
+  </a>
+</div>
+
+<!-- ── Installation ── -->
+<section class="platform-section" id="install">
+  <div class="platform-section-inner">
+    <h2>Installation</h2>
+    <p class="section-intro">Follow all three steps in order. Each step is required for the app to work fully.</p>
+
+    <div class="install-steps">
+
+      <div class="install-step">
+        <div class="install-step-num">1</div>
+        <div class="install-step-body">
+          <h3>Open the app — bypass Gatekeeper</h3>
+          <p>macOS blocks apps that aren't signed by a registered Apple developer. Script Tool is safe — use one of these methods to allow it:</p>
+          <div class="method-block">
+            <h4>System Settings <span class="recommended-tag">easiest</span></h4>
+            <ol>
+              <li>Open the DMG, drag <strong>Script Tool</strong> to your Applications folder.</li>
+              <li>Double-click Script Tool — macOS shows a warning. Click <strong>Cancel</strong>.</li>
+              <li>Open <strong>Apple menu → System Settings → Privacy &amp; Security</strong>.</li>
+              <li>Scroll down to the blocked-app notice and click <strong>Open Anyway</strong>.</li>
+              <li>Confirm by clicking <strong>Open</strong> in the dialog that appears.</li>
+            </ol>
+          </div>
+          <div class="method-block">
+            <h4>Right-click trick</h4>
+            <ol>
+              <li>In Finder, <strong>right-click</strong> (or Control-click) Script Tool.app.</li>
+              <li>Choose <strong>Open</strong> from the menu.</li>
+              <li>Click <strong>Open</strong> in the confirmation dialog.</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+
+      <div class="install-step">
+        <div class="install-step-num">2</div>
+        <div class="install-step-body">
+          <h3>Clear the quarantine flag <span class="required-tag">required</span></h3>
+          <p>Even after opening, macOS may keep a quarantine flag on the app that causes problems over time. Clear it with one Terminal command:</p>
+          <ol>
+            <li>Press <kbd>Cmd+Space</kbd>, type <strong>Terminal</strong>, press <kbd>Return</kbd>.</li>
+            <li>Paste and run:</li>
+          </ol>
+          <code class="install-code">xattr -cr "/Applications/Script Tool.app"</code>
+          <p class="install-note">This permanently removes the quarantine attribute. You only need to do this once.</p>
+        </div>
+      </div>
+
+      <div class="install-step">
+        <div class="install-step-num">3</div>
+        <div class="install-step-body">
+          <h3>Grant Accessibility permission <span class="required-tag">required for IME</span></h3>
+          <p>The inline Sanskrit IME intercepts keystrokes system-wide. macOS requires explicit Accessibility permission for this.</p>
+          <ol>
+            <li>Launch Script Tool — the <span class="tray-icon">ॐ</span> icon appears in your menu bar.</li>
+            <li>Press <kbd>Alt+Shift+M</kbd> to toggle the IME — macOS will prompt you to open System Settings.</li>
+            <li>Go to <strong>System Settings → Privacy &amp; Security → Accessibility</strong>.</li>
+            <li>Find <strong>Script Tool</strong> in the list and toggle it <strong>ON</strong>.</li>
+            <li>Quit and relaunch Script Tool, then try <kbd>Alt+Shift+M</kbd> again.</li>
+          </ol>
+          <p class="install-note">Without Accessibility permission the IME shortcut will do nothing. The offline converter and quick panel work without it.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── How to use ── -->
+<section class="platform-section platform-section-alt" id="using">
+  <div class="platform-section-inner">
+    <h2>How to use Script Tool</h2>
+
+    <div class="usage-tabs">
+
+      <!-- Inline IME -->
+      <div class="usage-tab">
+        <div class="usage-tab-head">
+          <span class="mode-num">A</span>
+          <div>
+            <h3>Inline IME — type in any app</h3>
+            <p class="usage-sub">Keystrokes intercepted system-wide. Text inserted directly, no copy-paste.</p>
+          </div>
+        </div>
+        <div class="steps">
+          <div class="step">
+            <div class="step-num">1</div>
+            <div class="step-body">
+              <h4>Toggle IME on — <kbd>Alt+Shift+M</kbd></h4>
+              <p>A slim indicator bar appears at the top of your screen showing your active scheme and script (e.g. <em>ITRANS ▶ Active</em>). Click into any text field in any app.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">2</div>
+            <div class="step-body">
+              <h4>Type phonetic text</h4>
+              <p>Start typing — e.g. <code>namaskaara</code>. The indicator bar shows <em>namaskaara → नमस्कार</em> live as you type. Your keystrokes are intercepted; nothing appears in the app yet.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">3</div>
+            <div class="step-body">
+              <h4>Commit the word — <kbd>Space</kbd> or <kbd>Enter</kbd></h4>
+              <p>Press <kbd>Space</kbd> — <em>नमस्कार </em> is inserted directly into the text field. Press <kbd>Enter</kbd> to insert with a newline. Continue typing the next word immediately.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">4</div>
+            <div class="step-body">
+              <h4>Switch script or scheme mid-sentence</h4>
+              <p>Press <kbd>Alt+Shift+O</kbd> to cycle through all 7 scripts. Press <kbd>Alt+Shift+1/2/3</kbd> to switch between ITRANS, Harvard-Kyoto, and SLP1 — without leaving your app.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">5</div>
+            <div class="step-body">
+              <h4>Exit IME — <kbd>Esc</kbd> or <kbd>Alt+Shift+M</kbd></h4>
+              <p>Press <kbd>Esc</kbd> to cancel the current word and exit IME mode. Or press <kbd>Alt+Shift+M</kbd> again to toggle it off.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Offline Converter -->
+      <div class="usage-tab">
+        <div class="usage-tab-head">
+          <span class="mode-num">B</span>
+          <div>
+            <h3>Offline Converter</h3>
+            <p class="usage-sub">Side-by-side Indic script + IAST output. Copy with one click.</p>
+          </div>
+        </div>
+        <div class="steps">
+          <div class="step">
+            <div class="step-num">1</div>
+            <div class="step-body">
+              <h4>Open the converter — <kbd>Alt+Shift+I</kbd></h4>
+              <p>Press the shortcut from any app, or click the <span class="tray-icon">ॐ</span> menu bar icon and choose <strong>Open Script Tool</strong>.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">2</div>
+            <div class="step-body">
+              <h4>Choose scheme and script</h4>
+              <p>Select your input scheme (ITRANS / Harvard-Kyoto / SLP1) and output script (Devanagari, Kannada, Telugu, Tamil, Bengali, Malayalam, or IAST) using the buttons at the top.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">3</div>
+            <div class="step-body">
+              <h4>Type and copy</h4>
+              <p>Type phonetic text in the input box. The Indic script output and IAST transliteration appear instantly side by side. Click <strong>Copy</strong> on whichever output you need.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Panel -->
+      <div class="usage-tab">
+        <div class="usage-tab-head">
+          <span class="mode-num">C</span>
+          <div>
+            <h3>Quick Panel</h3>
+            <p class="usage-sub">Floating overlay — type once, paste directly into the active app.</p>
+          </div>
+        </div>
+        <div class="steps">
+          <div class="step">
+            <div class="step-num">1</div>
+            <div class="step-body">
+              <h4>Open the panel — <kbd>Alt+Shift+S</kbd></h4>
+              <p>A small floating panel appears over whatever you're working in. The app behind it stays focused.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">2</div>
+            <div class="step-body">
+              <h4>Type and preview</h4>
+              <p>Type your word phonetically. You'll see the Devanagari preview instantly below the input field.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">3</div>
+            <div class="step-body">
+              <h4>Paste — <kbd>Enter</kbd></h4>
+              <p>Press <kbd>Enter</kbd> or click <strong>Paste ↵</strong>. The converted text is pasted directly into the app that was active behind the panel. Press <kbd>Esc</kbd> to close without pasting.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── Keyboard Shortcuts ── -->
+<section class="platform-section" id="shortcuts">
+  <div class="platform-section-inner">
+    <h2>Keyboard Shortcuts</h2>
+
+    <p class="shortcuts-sub">Global — work from any app, always active</p>
+    <div class="shortcut-table">
+      <div class="shortcut-row"><span>Open converter window</span><div class="kbd-group"><kbd>⌥</kbd><kbd>⇧</kbd><kbd>I</kbd></div></div>
+      <div class="shortcut-row"><span>Open quick panel</span><div class="kbd-group"><kbd>⌥</kbd><kbd>⇧</kbd><kbd>S</kbd></div></div>
+      <div class="shortcut-row"><span>Toggle Sanskrit IME on/off</span><div class="kbd-group"><kbd>⌥</kbd><kbd>⇧</kbd><kbd>M</kbd></div></div>
+    </div>
+
+    <p class="shortcuts-sub" style="margin-top:28px">While IME is active</p>
+    <div class="shortcut-table">
+      <div class="shortcut-row"><span>Switch to ITRANS scheme</span><div class="kbd-group"><kbd>⌥</kbd><kbd>⇧</kbd><kbd>1</kbd></div></div>
+      <div class="shortcut-row"><span>Switch to Harvard-Kyoto scheme</span><div class="kbd-group"><kbd>⌥</kbd><kbd>⇧</kbd><kbd>2</kbd></div></div>
+      <div class="shortcut-row"><span>Switch to SLP1 scheme</span><div class="kbd-group"><kbd>⌥</kbd><kbd>⇧</kbd><kbd>3</kbd></div></div>
+      <div class="shortcut-row"><span>Cycle output script</span><div class="kbd-group"><kbd>⌥</kbd><kbd>⇧</kbd><kbd>O</kbd></div></div>
+      <div class="shortcut-row"><span>Commit word + space</span><div class="kbd-group"><kbd>Space</kbd></div></div>
+      <div class="shortcut-row"><span>Commit word + newline</span><div class="kbd-group"><kbd>Enter</kbd></div></div>
+      <div class="shortcut-row"><span>Delete last phonetic character</span><div class="kbd-group"><kbd>⌫</kbd></div></div>
+      <div class="shortcut-row"><span>Cancel and exit IME</span><div class="kbd-group"><kbd>Esc</kbd></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Footer ── -->
+<footer>
+  <p>
+    Script Tool is free and open source.
+    &nbsp;·&nbsp;
+    <a href="https://github.com/kshamabn25-collab/script-tool" target="_blank">View on GitHub</a>
+    &nbsp;·&nbsp;
+    Built with <a href="https://tauri.app" target="_blank">Tauri</a>
+  </p>
+</footer>
+
+</body>
+</html>
