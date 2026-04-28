@@ -30,8 +30,8 @@
   <div class="platform-page-icon">🪟</div>
   <h1>Script Tool for Windows</h1>
   <p>Windows 10 or later &nbsp;·&nbsp; 64-bit</p>
-  <a class="dl-btn" href="https://github.com/kshamabn25-collab/script-tool/releases/latest/download/Script-Tool-windows.exe">
-    Download .exe
+  <a class="dl-btn" href="https://github.com/kshamabn25-collab/script-tool/releases/latest/download/Script-Tool-windows.zip">
+    Download .zip
   </a>
 </div>
 
@@ -46,21 +46,21 @@
       <div class="install-step">
         <div class="install-step-num">1</div>
         <div class="install-step-body">
-          <h3>Download — allow the file in your browser</h3>
-          <p>When downloading the <code>.exe</code>, your browser may flag it as an uncommon file:</p>
+          <h3>Download — allow the ZIP in your browser</h3>
+          <p>Your browser may warn about the downloaded file since it's from an unsigned developer:</p>
           <div class="method-block">
             <h4>Chrome</h4>
             <ol>
-              <li>Click the download in the bottom bar — Chrome may show <em>"This file isn't commonly downloaded"</em>.</li>
-              <li>Click the <strong>arrow (›)</strong> or the three-dot menu next to the file name.</li>
+              <li>Chrome may show <em>"This file isn't commonly downloaded"</em> in the download bar.</li>
+              <li>Click the <strong>arrow (›)</strong> or three-dot menu next to the file name.</li>
               <li>Select <strong>Keep</strong>.</li>
             </ol>
           </div>
           <div class="method-block">
             <h4>Microsoft Edge</h4>
             <ol>
-              <li>Edge may show a download warning in the sidebar or bottom bar.</li>
-              <li>Click <strong>See more</strong> (or the three-dot menu on the download).</li>
+              <li>Edge may show a download warning in the sidebar.</li>
+              <li>Click the <strong>three-dot menu (…)</strong> on the download entry.</li>
               <li>Click <strong>Keep anyway</strong>.</li>
             </ol>
           </div>
@@ -70,14 +70,11 @@
       <div class="install-step">
         <div class="install-step-num">2</div>
         <div class="install-step-body">
-          <h3>Run the installer — bypass SmartScreen</h3>
-          <p>Windows Defender SmartScreen may show a blue warning screen when you run the installer. This happens because the app doesn't yet have a paid Extended Validation certificate.</p>
+          <h3>Extract and place the app</h3>
           <ol>
-            <li>Double-click the downloaded <strong>Script-Tool-windows.exe</strong>.</li>
-            <li>When the blue SmartScreen screen appears, click <strong>More info</strong> (the small text link at the bottom-left).</li>
-            <li>A <strong>Run anyway</strong> button appears — click it.</li>
-            <li>If a User Account Control (UAC) prompt appears asking for permission, click <strong>Yes</strong>.</li>
-            <li>The installer runs and Script Tool is installed.</li>
+            <li>Double-click <strong>Script-Tool-windows.zip</strong> — Windows opens it in File Explorer.</li>
+            <li>Extract the contents to a permanent folder, e.g. <code>C:\Program Files\Script Tool\</code> or your Desktop.</li>
+            <li>The extracted folder contains <strong>Script Tool.exe</strong> (and possibly a DLL).</li>
           </ol>
         </div>
       </div>
@@ -85,13 +82,15 @@
       <div class="install-step">
         <div class="install-step-num">3</div>
         <div class="install-step-body">
-          <h3>Launch and find the tray icon</h3>
+          <h3>Run — bypass SmartScreen</h3>
+          <p>Windows Defender SmartScreen may warn the first time you run the app because it isn't signed with a paid certificate.</p>
           <ol>
-            <li>After installation, Script Tool starts automatically.</li>
-            <li>Look for the <span class="tray-icon">ॐ</span> icon in the system tray (bottom-right of your screen).</li>
-            <li>If you don't see it, click the <strong>^ arrow</strong> in the taskbar to expand hidden tray icons.</li>
-            <li>Right-click the icon to access all features, or use the keyboard shortcuts below.</li>
+            <li>Double-click <strong>Script Tool.exe</strong>.</li>
+            <li>If a blue SmartScreen screen appears, click <strong>More info</strong> (bottom-left).</li>
+            <li>Click <strong>Run anyway</strong>.</li>
+            <li>The <span class="tray-icon">ॐ</span> icon appears in your system tray (bottom-right). Script Tool is running.</li>
           </ol>
+          <p class="install-note">SmartScreen only asks once. On subsequent launches it opens directly.</p>
         </div>
       </div>
 
