@@ -23,11 +23,11 @@ A free, offline menu-bar app for typing Sanskrit and other Indic scripts — wor
 5. Grant **Accessibility permission**: **System Settings → Privacy & Security → Accessibility → Script Tool → ON**
 
 **Windows:**
-1. Download `Script Tool_x.x.x_x64-setup.exe` from the release
-2. Double-click to install — if Windows SmartScreen appears, click **More info → Run anyway**
-3. Script Tool starts in the system tray (bottom-right notification area)
+1. Download `Script-Tool-windows.zip` and extract it to a permanent folder
+2. Double-click **Script Tool.exe** — if SmartScreen appears, click **More info → Run anyway**
+3. The ॐ icon appears in your system tray (bottom-right)
 
-> Note: The global Sanskrit IME (`Alt+Shift+M`) is macOS-only. On Windows, use the converter window (`Alt+Shift+I`) and quick panel (`Alt+Shift+S`) to transliterate and paste.
+> The Sanskrit IME (`Alt+Shift+M`) now works on both macOS and Windows.
 
 ## Keyboard Shortcuts
 
