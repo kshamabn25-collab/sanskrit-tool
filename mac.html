@@ -47,42 +47,17 @@
         <div class="install-step-num">1</div>
         <div class="install-step-body">
           <h3>Open the app — bypass Gatekeeper</h3>
-          <p>macOS blocks apps that aren't signed by a registered Apple developer. Script Tool is safe — use one of these methods to allow it:</p>
+          <p>macOS blocks apps that aren't signed by a registered Apple developer. Script Tool is safe — use the below steps methods to allow it:</p>
           <div class="method-block">
             <h4>System Settings <span class="recommended-tag">easiest</span></h4>
             <ol>
               <li>Download <strong>Script-Tool-mac.zip</strong> and double-click it — <strong>Script Tool.app</strong> appears.</li>
-              <li>Drag <strong>Script Tool.app</strong> to your <strong>Applications</strong> folder.</li>
-              <li>Double-click Script Tool — macOS shows a warning. Click <strong>Cancel</strong>.</li>
+              <li>Double-click Script Tool → macOS shows a warning → Click <strong>Cancel</strong>.</li>
               <li>Open <strong>Apple menu → System Settings → Privacy &amp; Security</strong>.</li>
               <li>Scroll down to the blocked-app notice and click <strong>Open Anyway</strong>.</li>
               <li>Confirm by clicking <strong>Open</strong> in the dialog that appears.</li>
             </ol>
           </div>
-          <div class="method-block">
-            <h4>Right-click trick</h4>
-            <ol>
-              <li>In Finder, <strong>right-click</strong> (or Control-click) <strong>Script Tool.app</strong> in Applications.</li>
-              <li>Choose <strong>Open</strong> from the menu.</li>
-              <li>Click <strong>Open</strong> in the confirmation dialog.</li>
-            </ol>
-          </div>
-        </div>
-      </div>
-
-      <div class="install-step">
-        <div class="install-step-num">2</div>
-        <div class="install-step-body">
-          <h3>Clear the quarantine flag <span class="required-tag">required</span></h3>
-          <p>Even after opening, macOS may keep a quarantine flag on the app that causes problems over time. Clear it with one Terminal command:</p>
-          <ol>
-            <li>Press <kbd>Cmd+Space</kbd>, type <strong>Terminal</strong>, press <kbd>Return</kbd>.</li>
-            <li>Paste and run:</li>
-          </ol>
-          <code class="install-code">xattr -cr "/Applications/Script Tool.app"</code>
-          <p class="install-note">This permanently removes the quarantine attribute. You only need to do this once.</p>
-        </div>
-      </div>
 
       <div class="install-step">
         <div class="install-step-num">3</div>
