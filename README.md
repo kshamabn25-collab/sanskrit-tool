@@ -16,10 +16,11 @@ A free, offline menu-bar app for typing Sanskrit and other Indic scripts — wor
 👉 **[Go to Releases](https://github.com/kshamabn25-collab/script-tool/releases/latest)** to download.
 
 **macOS:**
-1. Download `Script-Tool-mac.dmg`
-2. Open the DMG and drag **Script Tool** to your Applications folder
-3. On first launch, right-click **Script Tool → Open** (macOS blocks unnotarised apps on double-click)
-4. Grant **Accessibility permission** when prompted (required for the IME to intercept keystrokes). Go to **System Settings → Privacy & Security → Accessibility** and enable Script Tool.
+1. Download `Script-Tool-mac.zip` and double-click to unzip — **Script Tool.app** appears
+2. Drag **Script Tool.app** to your Applications folder
+3. Open Terminal and run: `xattr -cr "/Applications/Script Tool.app"` (clears the quarantine flag)
+4. On first launch, right-click **Script Tool → Open** if macOS still warns
+5. Grant **Accessibility permission**: **System Settings → Privacy & Security → Accessibility → Script Tool → ON**
 
 **Windows:**
 1. Download `Script Tool_x.x.x_x64-setup.exe` from the release
